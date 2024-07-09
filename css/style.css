@@ -42,7 +42,7 @@ h6{
     padding: 0;
 }
 
-/*  Header  */
+/*  Header css Start  */
 header {
     width: 100%;
 }
@@ -107,9 +107,7 @@ header .main-logo {
     top: 25px;
     height: 100%;
     width: 100%;
-
 }
-
 header .header-menu-call .header-contact .shop-header {
     display: flex;
     flex-flow: row;
@@ -121,8 +119,13 @@ header .header-menu-call .header-contact .shop-logo,
 header .header-menu-call .header-contact .search-logo {
     background-color: #fff;
     border-radius: 50%;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 0px 4px 20px 0px #00000014;
+}
+.shop-logo img, .search-logo img {
+    display: flex;
+    justify-content: center;
+    max-width: 24px;
 }
 header .header-menu-call .contact-button a {
     background: #7DA265;
@@ -135,6 +138,19 @@ header .header-menu-call .contact-button a {
     font-size: 20px;
     line-height: 25.2px;
 }
+@media only screen and (min-width:1200px) and (max-width:1300px){
+    header .header-menu-call .header-contact .shop-logo, header .header-menu-call .header-contact .search-logo{
+        padding: 10px;
+    }
+    header .header-menu-call .contact-button a{
+        padding: 10px 16px 10px 16px;
+        font-size: 15px;
+    }
+    .main-header-content .header-contact{
+        gap: 18px;
+    }
+}
+
 /* Sidebar Menu Start  */
 span img{
     width: 30px;
@@ -147,39 +163,37 @@ header span {
 }
 .sidenav {
    
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
     top: 0;
     right: 0;
-    background-color: #c2c1c1; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #c2c1c1; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
 }
 .sidenav .header-logo img{
     width: 70%;
 }
-/* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 20px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     font-family: 'Plus Jakarta Sans';
-    color: #000;
+    color: #161616;
+    font-weight: 500;
+
     display: block;
     transition: 0.3s
 }
 .sidenav a.active{
     color: #7DA265;
 }
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }
-
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -187,20 +201,21 @@ header span {
     font-size: 36px;
     margin-left: 50px;
 }
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
     padding: 20px;
 }
+.header-menu-call-mobile .closebtn img {
+    height: 35px;
+    width: 35px;
+    margin-right: -15px;
+    margin-top: 20px;
+}
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
-
-
 @media only screen and (max-width: 1199px) {
     header span {
         display: block;
@@ -213,7 +228,6 @@ header span {
     }
     .sidenav .header-logo {
         margin-bottom: 20px;
-        margin-left: 20px;
     }
 }
 @media screen and (max-height: 450px) {
@@ -248,22 +262,342 @@ box-shadow: 0px 4px 20px 0px #00000014;
         width: 200px;
     }
 }
-/* Sidbar Menu End  */
+/* Sidebar Menu End  */
 
+/* Header css End  */
 
-
-
-
-/* Banner Section */
-.banner-section{
-    background-image: url("../images/banner-bg.png");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Footer css start */
+footer {
+    background-color: #000;
+}
+.footer__container {
+    width: 100%;
+    max-width: 1920px;
+    padding: 101px 20px 0px 20px;
+    margin: 0 auto;
+}
+.footer__parts {
     display: flex;
-    justify-content: center;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+.footer__logo-main, .footer__quick-links, .footer__infomation {
+    max-width: 33%;
+}
+.footer__logo-main{
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+}
+.footer__logo {
+    width: 278px;
+}
+.footer__logo-content p {
+    max-width: 412px;
+    font-family: 'Plus Jakarta Sans';
+    font-size: clamp(1rem, 0.925rem + 0.375vw, 1.375rem);
+    font-weight: 500;
+    line-height: 36px;
+    color: #fff;
+}
+.footer__quick-links-title, .footer__infomation-title {
+    font-family: 'Crimson Pro';
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 31.12px;
+    margin-bottom: 31px;
+}
+.footer__quick-links-menu ul li a {
+    font-family: 'Plus Jakarta Sans';
+    font-size: clamp(1rem, 0.925rem + 0.375vw, 1.375rem);
+    color: #fff;
+    font-weight: 500;
+    line-height: 27.72px;
+}
+.footer__quick-links-menu ul {
+    gap: 24px;
+    display: flex;
+    flex-flow: column;
+}
+.footer__quick-links-menu a.active {
+    border-bottom: 2px solid #7DA265;
+    padding-bottom: 1px;
+}
+ul.footer__infomation-menu {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+}
+p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__infomation-menu-time {
+    font-family: 'Plus Jakarta Sans';
+    color: #fff;
+    width: 370px;
+    font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+    font-weight: 400;
+    line-height: 26px;
+}
+.footer__infomation-menu-location img, .footer__infomation-menu-date img {
+    width: 14px;
+    height: 20px;
+    margin-top: 6px;
+}
+.footer__infomation-menu-time img {
+    width: 18px;
+    height: 18px;
+    margin-top: 6px;
+}
+.footer__infomation-menu li {
+    display: flex;
+    flex-flow: row;
+    gap: 18px;
+}
+.footer__row {
+    border-bottom: 1px solid #FFFFFF33;
+    padding-bottom: 80px;
+}
+.footer__row-copyright p {
+    padding: 22px;
+    font-family: 'Plus Jakarta Sans';
+    color: #fff;
+    font-weight: 400;
+    font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+    text-align: center;
+}
+
+@media (max-width:1024px){
+    .footer__logo-main, .footer__quick-links, .footer__infomation{
+        max-width: 50%;
+        flex: 1 1 50%;
+    }
+    .footer__quick-links {
+        padding-left: 30px;
+    }
+    .footer__quick-links-menu ul{
+        gap: 20px;
+    }
+    .footer__infomation{
+        margin-top: 30px;
+    }
+    .footer__logo-main{
+        gap: 20px;
+    }
+    .footer__row{
+        padding-bottom: 50px;
+    }
+    .footer__container{
+        padding: 80px 20px 0px 20px;
+    }
+}
+@media (max-width:767px){
+    .footer__logo-main, .footer__quick-links, .footer__infomation{
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    .footer__quick-links {
+        padding-left: 0px;
+        margin-top: 30px;
+    }
+    .footer__quick-links-menu ul{
+        gap: 10px;
+    }
+    .footer__logo-content p{
+        max-width: 100%;
+    }
+    .footer__quick-links-title, .footer__infomation-title{
+        margin-bottom: 21px;
+    }
+    ul.footer__infomation-menu{
+        gap: 12px;
+    }
+    .footer__row {
+        padding-bottom: 30px;
+    }
+    .footer__container{
+        padding: 50px 20px 0px 20px;
+    }
+}
+
+/* Deal section css */
+.deal-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+.deal__container{
+    width: 100%;
+    max-width: 1920px;
+    padding: 0px 20px 0px 20px;
+    margin: 0 auto;
+}
+.deal-section__title {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+    font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
+    line-height: 71px;
+    color: #161616;
+    margin-bottom: 63px;
     position: relative;
 }
-.banner-section .container{
-    max-width: 1300px !important;
+.deal-section__title:before{
+    position: absolute;
+    content: "";
+    background-image: url(../images/tree-img.png);
+    background-repeat: no-repeat;
+    top: -35px;
+    height: 85px;
+    width: 85px;
+    right: 48%;
+}
+
+.deal-section__title span {
+    font-weight: bold;
+}
+
+.deal-section__boxs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.deal-card {
+    background-color: #fff;
+    border: 1px solid #7DA26580;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 620px;
+    height: 306px;
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    align-items: center;
+    padding: 41px 45px 44px 42px;
+}
+
+.green .deal-card__countdown {
+    background-color: #7DA265;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    padding: 12px;
+    border-radius: 8px;
+    height: 215px;
+}
+
+.deal-card__countdown-item {
+    font-family: 'Plus Jakarta Sans';
+    text-align: center;
+    color: #ffffff;
+    font-size: clamp(1rem, 0.925rem + 0.375vw, 1.375rem);
+    font-weight: 700;
+    line-height: 28px;
+}
+.deal-card__countdown-item span {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.deal-card__countdown-item:not(:nth-child(4n)) {
+    border-bottom: 1px solid #fff;
+
+}
+.blue .deal-card__countdown {
+    background-color: #446FB6;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    padding: 12px;
+    border-radius: 8px;
+    height: 215px;
+}
+
+.deal-card__content {
+    text-align: left;
+    width: 100%;
+}
+.green .deal-card__discount {
+    background-color: #7DA26524;
+    color: #7DA265;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+    max-width: fit-content;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 18px;
+    line-height: 23px;
+}
+.deal-card__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.deal-card__info h3 {
+    font-size: 20px;
+    margin: 0 0 8px 0;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    line-height: 30px;
+    width: 233px;
+    color: #161616;
+}
+.deal-card__info p {
+    color: #6A6A6A;
+    margin-bottom: 26px;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: capitalize;
+}
+.green .deal-card__button {
+    background-color: #7DA265;
+    color: #fff;
+    padding: 4px 10px 6px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+}
+.blue .deal-card__discount {
+    background-color: #446FB624;
+    color: #446FB6;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+    max-width: fit-content;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 18px;
+    line-height: 23px;
+}
+.blue .deal-card__button {
+    background-color: #446FB6;
+    color: #fff;
+    padding: 4px 10px 6px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+}
+
+.deal-card__button:hover {
+    background-color: #388e3c;
+}
+
+@media (max-width: 768px) {
+    .deal-section__boxs {
+        flex-direction: column;
+        align-items: center;
+    }
 }

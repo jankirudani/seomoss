@@ -9,19 +9,23 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/slick.min.css"/>
-        <link rel="stylesheet" type="text/css" href="css/slick-theme.min.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/slick.css">
+        <link rel="stylesheet" type="text/css" href="./css/slick.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/slick-theme.min.css">
 
     </head>
     <body>
+        <!-- Header section Start -->
         <header>
             <div class="main-header">
                 <div class="container">
                     <div class="main-header-content">
                         <div class="main-logo">
+                            <!-- Header logo section -->
                             <div class="header-logo">
                                 <a href="/home"><img src="./images/header_logo.png"></a>
                             </div>
+                            <!-- Header menu section -->
                             <div class="header-menu">
                                 <ul>
                                     <li><a href="#" class="active">Home</a></li>
@@ -34,6 +38,7 @@
                         </div>
                         <div class="header-menu-call">
                             <div class="header-contact">
+                                <!-- Header quicklink contact section -->
                                 <div class="shop-header">
                                     <div class="shop-logo">
                                         <img src="./images/shop.png">
@@ -54,12 +59,14 @@
                 </div>
             </div>
         </header>
+
+        <!-- Header mobile menu section -->
         <div class="header-menu-call-mobile">
             <div id="mySidenav" class="sidenav">
                 <div class="header-logo">
                     <a href="/home"><img src="./images/header_logo.png"></a>
                 </div>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./images/close-icon.svg"/></a>
                 <a href="#" class="active">Home</a>
                 <a href="#">Service</a>
                 <a href="#">Product</a>
@@ -75,17 +82,173 @@
             </div>
              
         </div>
+        <!-- Header section End -->
+
+
+        <!-- Main section Start -->
         <main>
-            <section class="banner-section">
-                <div class="container">
-                    <div class="banner-main">
+            <!-- Banner section start 
+            <section class="banner">
+                <div class="banner__container">
+                    <div class="banner__row">
+                        <div class="banner__main">
+                            <div class="client-image client-logo">
+                                <div class="client-logos">
+                                    <img src="./images/banner-bg.png">
+                                </div>
+                                <div class="client-logos">
+                                    <img src="./images/banner-bg.png">
+                                </div>
+                                <div class="client-logos">
+                                    <img src="./images/banner-bg.png">
+                                </div>
+                                <div class="client-logos">
+                                    <img src="./images/banner-bg.png">
+                                </div>
+                               
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-        </main>
+             Banner section end -->
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/custom.js"></script>
+            <!-- Deal  section start -->
+            <section class="deal-section">
+                <div class="deal__row">
+                    <div class="deal__container">
+                        <h2 class="deal-section__title">Deal Of The <span>Day</span></h2>
+                        <div class="deal-section__boxs">
+                            <div class="deal-card green">
+                                <div class="deal-card__countdown">
+                                    <div class="deal-card__countdown-item">02<br><span>Days</span></div>
+                                    <div class="deal-card__countdown-item">02<br><span>Days</span></div>
+                                    <div class="deal-card__countdown-item">02<br><span>Days</span></div>
+                                    <div class="deal-card__countdown-item">02<br><span>Days</span></div>
+                                </div>
+                                <div class="deal-card__image">
+                                    <img src="./images/deal-image.png" alt="Product Image" class="deal-card__image">
+                                </div>
+                                <div class="deal-card__content">
+                                    <div class="deal-card__discount">50 %</div>
+                                    <div class="deal-card__info">
+                                        <h3>The industry's standard dummy text ever</h3>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and </p>
+                                        <a href="#" class="deal-card__button ">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="deal-card blue">
+                                <div class="deal-card__countdown">
+                                    <div class="deal-card__countdown-item">02<br><span>Days</span></div>
+                                    <div class="deal-card__countdown-item">02<br><span>Days</span></div>
+                                    <div class="deal-card__countdown-item">02<br><span>Days</span></div>
+                                    <div class="deal-card__countdown-item">02<br><span>Days</span></div>
+                                </div>
+                                <div class="deal-card__image">
+                                    <img src="./images/deal-image.png" alt="Product Image" class="deal-card__image">
+                                </div>
+                                <div class="deal-card__content">
+                                    <div class="deal-card__discount">50%</div>
+                                    <div class="deal-card__info">
+                                        <h3>The industry's standard dummy text ever</h3>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and </p>
+                                        <a href="#" class="deal-card__button">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Deal section end -->
+
+
+        </main>
+        <!-- Main section End -->
+
+
+        <!-- Footer section Start -->
+        <footer>
+            <div class="footer__container"> 
+                <div class="footer__row"> 
+                    <div class="footer__parts">
+                        <!-- Main logo and content section -->
+                        <div class="footer__logo-main">
+                            <div class="footer__logo">
+                                <a href="/home" class="footer__logo-link">
+                                    <img src="./images/footer-logo.png" alt="Logo" class="header__logo-image">
+                                </a>
+                            </div>
+                            <div class="footer__logo-content">
+                                <p class="footer__content">Lorem Ipsum is simply dummy text of the printing and typesetting indusy. Lorem Ipsum has been the industry's standard dummy.</p>
+                            </div>
+                        </div>
+            
+                        <!-- Quick links section -->
+                        <div class="footer__quick-links">
+                            <div class="footer__quick-links-title">Quicks link</div>
+                            <div class="footer__quick-links-menu">
+                                <ul>
+                                    <li><a href="#" class="active">Home</a></li>
+                                    <li><a href="#">Service</a></li>
+                                    <li><a href="#">Product</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+            
+                        <!-- Information section -->
+                        <div class="footer__infomation">
+                            <div class="footer__infomation-title">Information</div>
+                            <ul class="footer__infomation-menu">
+                                <!-- Location -->
+                                <li class="footer__infomation-menu-location">
+                                    <img src="./images/location.png">
+                                    <p class="footer__infomation-menu-location">Office 102, 1st Floor, Ashar Bellezza (Ashar 16), 16th Road, Wagle Estate, Thane West 400607.</p>
+                                </li>
+                                <!-- Working days -->
+                                <li class="footer__infomation-menu-date">
+                                    <img src="./images/days.png">
+                                    <p class="footer__infomation-menu-date">Monday - Friday</p>
+                                </li>
+                                <!-- Working hours -->
+                                <li class="footer__infomation-menu-time">
+                                    <img src="./images/time.png">
+                                    <p class="footer__infomation-menu-time">10:00 AM - 08:00 PM</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__row-copyright">
+                    <p>Copyright © 2023  Prodigy Seamoss. All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+         <!-- Footer section End -->
+        
+
+
+
+
+
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/custom.js"></script>
+        <script>
+            jQuery('.client-logo').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: true,
+                dots:true,
+                autoplaySpeed: 2000,
+
+            });
+        </script>
 
     </body>
 </html>
