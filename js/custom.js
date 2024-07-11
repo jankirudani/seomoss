@@ -4,10 +4,10 @@ jQuery( document ).ready(function() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
         dots:true,
         autoplaySpeed: 2000
     });
+
 
     //Mobile-menu js
     function openNav() {

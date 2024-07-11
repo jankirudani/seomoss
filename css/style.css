@@ -45,6 +45,7 @@ h6{
 /*  Header css Start  */
 header {
     width: 100%;
+    background: #f29a4114;
 }
 header .main-header {
     width: 100%;
@@ -448,7 +449,9 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     top: -35px;
     height: 85px;
     width: 85px;
-    right: 48%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
 }
 
 .deal-section__title span {
@@ -590,10 +593,6 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     line-height: 23px;
 }
 
-.deal-card__button:hover {
-    background-color: #388e3c;
-}
-
 @media (max-width:1200px){
     .deal-card{
         display: flex;
@@ -626,6 +625,12 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     .deal-section__title:before{
         right: 45%;
     }
+    .product-card{
+        padding: 20px;
+    }
+    .dealday__container{
+        padding: 100px 20px 100px 20px !important;
+    }
 }
 @media (max-width: 768px) {
     .deal-section__boxs {
@@ -634,6 +639,9 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     }
     .deal-section{
         padding: 50px 20px;
+    }
+    .dealday__container{
+        padding: 80px 20px 80px 20px !important;
     }
 }
 @media (max-width:425px){
@@ -684,8 +692,9 @@ section.about-section:before{
     background-repeat: no-repeat;
     height: 108px;
     width: 124px;
-    bottom: -60px;
-    right: -45px;
+    bottom: -50px;
+    right: -35px;
+    margin: 0 auto;
 }
 .about__content {
     width: 50%;
@@ -697,7 +706,9 @@ h2.about__heading-title:before{
     background-image: url(../images/tree.png);
     height: 85px;
     width: 85px;
-    top: -30px;
+    bottom: 20px;
+    left: 0;
+    margin: 0 auto;
 }
 h2.about__heading-title {
     font-family: 'Plus Jakarta Sans';
@@ -808,19 +819,17 @@ section.dealday-section {
 }
 
 .product-card {
-    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
     width: 403px;
-    padding: 20px;
 }
-
-
-
 .product-info {
-    padding: 20px;
+    padding: 180px 40px 40px;
+    background-color: #fff;
+    margin-top: -145px;
+    box-shadow: 0px 18px 50px 0px #0000000A;
+    border-radius: 16px;
 }
 
 .product-description {
@@ -892,4 +901,391 @@ a.product-shop {
     flex-flow: row;
     gap: 41px;
     margin-bottom: 60px;
+}
+.gallery__tabs {
+    width: calc(50% - 38.5px);
+}
+.gallery__tabs-content {
+    width: 50%;
+}
+.gallery__date {
+    font-family: 'Plus Jakarta Sans';
+    color: #6A6A6A;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+}
+h4.gallery__title {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #161616;
+}
+p.gallery__desc {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #6A6A6A;
+    width: 502px;
+    display: none;
+}
+.gallery__tab:hover .gallery__desc {
+    display: block;
+}
+.gallery__tab{
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+li.gallery__tab:hover {
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0px 18px 50px 0px #7DA26533;
+    padding:40px;
+    width:722px;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+li.gallery__tab:hover .gallery__title,
+li.gallery__tab:hover .gallery__desc{
+    width: 100%;
+}
+li.gallery__tab:hover .gallery__info-box{
+    margin-bottom: 0px;
+}
+.gallery__tab-pane {
+    position: absolute;
+    z-index: -1;
+}
+li.gallery__tab:hover h4.gallery__title {
+    color: #7DA265;
+    margin-bottom: 12px;
+}
+section.gallery-section {
+    position: relative;
+}
+section.gallery-section::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/gallery-tree.png);
+    background-repeat: no-repeat;
+    width: 334px;
+    height: 410px;
+    bottom: 50px;
+    left: 0;
+}
+
+@media (max-width:1200px){
+    section.gallery-section::before{
+        display: none;
+    }
+}
+@media (max-width:1024px){
+    .gallery__container{
+        padding: 100px 20px 100px 20px;
+    }
+    .gallery-section__tabs{
+        display: flex;
+        flex-flow: column;
+        gap:38px;
+    }
+    .gallery__tabs, .gallery__tabs-content{
+        width: 100%;
+    }
+    .gallery__tab-pane{
+        position: relative;
+    }
+}
+@media (max-width:767px){
+    .gallery__container{
+        padding: 80px 20px 80px 20px;
+    }
+}
+
+/* Banner section ss */
+.banner__container{
+    width: 100%;
+    max-width: 1470px;
+    padding: 150px 20px 100px 20px;
+    margin: 0 auto;
+    position: relative;
+}
+section.banner {
+    background: #f29a4114;
+    position: relative;
+}
+section.banner::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/seamoss.png);
+    background-repeat: no-repeat;
+    height: 328px;
+    width: 1314px;
+    top: 0;
+    left: 0;
+}
+section.banner::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/banner-bottom-image.png);
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 492px;
+    bottom: -120px;
+    left: 100px;
+}
+.banner__main {
+    display: flex;
+    flex-flow: row;
+}
+h1.banner__heading-top {
+    font-size: 120px;
+    color: #446FB6;
+    font-family: 'Plus Jakarta Sans';
+    line-height: 151px;
+    font-weight: 600;
+}
+h2.banner_heading-sub {
+    font-weight: 600;
+    color: #161616;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 60px;
+    line-height: 75px;
+    width: 992px;
+}
+.banner_images {
+    width: 599px;
+    height: 592px;
+}
+a.banner-shop {
+    background: #7DA265;
+    border-radius: 70px;
+    padding: 15px 32px 20px 32px;
+    box-shadow: 0px 12px 26px 0px #7DA2654D;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25.2px;
+}
+.banner__shop-btn {
+    display: flex;
+    justify-content: center;
+}
+.banner__secial-media {
+    display: flex;
+    flex-flow: column;
+    gap: 21px;
+    position: absolute;
+    right: -10%;
+    bottom: 50%;
+}
+.social {
+    background: #161616;
+    padding: 14px;
+    height: 46px;
+    width: 46px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+a.banner-email {
+    position: relative;
+}
+a.banner-email:before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/social-top.png);
+    background-repeat: no-repeat;
+    width: 2px;
+    height: 296px;
+    bottom: 30px;
+    left: 7px;
+
+}
+a.banner-twitter {
+    position: relative;
+}
+a.banner-twitter:before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/social-bottom.png);
+    background-repeat: no-repeat;
+    width: 2px;
+    height: 296px;
+    top: 30px;
+    left: 7px;
+
+}
+
+/* Testimonial section css */
+.testimonial__container{
+    width: 100%;
+    max-width: 1270px;
+    padding: 0px 20px 0px 20px;
+    margin: 0 auto;
+}
+h2.testimonial-section__title {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    font-size: clamp(2.5rem, 2.2217rem + 1.3913vw, 3.5rem);
+    line-height: 71px;
+    color: #0E0E0E;
+    margin-bottom: 65px;
+    position: relative;
+    text-align: center;
+}
+h2.testimonial-section__title::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/tree.png);
+    background-repeat: no-repeat;
+    top: -35px;
+    height: 85px;
+    width: 85px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+.testimonial__slide {
+    display: flex;
+    flex-flow: row;
+    gap: 60px;
+    align-items: center;
+}
+.testimonial__client-name {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    color: #161616;
+    margin-bottom: 3px;
+}
+.testimonial__client-rating {
+    width: 86px;
+    margin-bottom: 30px;
+}
+.testimonial__client-review-content {
+    font-family: 'Plus Jakarta Sans';
+    color: #6A6A6A;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    width: 526px;
+}
+.testimonial__data {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Newsletter section css */
+.newsletter__container{
+    width: 100%;
+    max-width: 1270px;
+    padding: 150px 20px 150px 20px;
+    margin: 0 auto;
+}
+.newsletter__form-data {
+    display: flex;
+    flex-flow: row;
+    gap: 70px;
+    width: 100%;
+}
+.newsletter__heading {
+    width: calc(45% - 35px);
+}
+.newsletter__form {
+    width: 55%;
+}
+h2.newsletter-section__title {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+    font-size: clamp(2.5rem, 2.2217rem + 1.3913vw, 3.5rem);
+    line-height: 71px;
+    color: #0E0E0E;
+    margin-bottom: 16px;
+    position: relative;
+}
+h2.newsletter-section__title::before{
+    position: absolute;
+    content: "";
+    background-image: url(../images/tree.png);
+    background-repeat: no-repeat;
+    height: 85px;
+    width: 85px;
+    top: -35px;
+    left: 0;
+    margin: 0 auto;
+}
+.newsletter-section__subtitle {
+    font-family: 'Plus Jakarta Sans';
+    color: #171717;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 52px;
+    margin-bottom: 13px;
+}
+p.newsletter-section__content {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    color: #000;
+}
+.newsletter__form {
+    box-shadow: 0px 18px 50px 0px #0000000A;
+    border-radius: 16px;
+    padding: 60px;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #151515;
+    color: white;
+    padding: 12px 32px 18px 32px;
+    border: none;
+    border-radius: 70px;
+    cursor: pointer;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #000000;
+    font-family: 'Plus Jakarta Sans';
+    size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+}
+@media (max-width:1024px){
+    .newsletter__form-data{
+        display: flex;
+        flex-flow: column;
+        gap: 30px;
+    }
+    .newsletter__heading{
+        width: 100%;
+    }
+    .newsletter__form{
+        width: 100%;
+    }
 }
