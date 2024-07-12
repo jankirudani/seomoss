@@ -1,28 +1,22 @@
 jQuery( document ).ready(function() {
     //Banner slider js
-    jQuery('.client-logo').slick({
-        infinite: true,
+    jQuery('.testimonial__data, .banner-sliders').slick({
+        infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots:true,
+        arrows:true,
         autoplaySpeed: 2000
     });
 
-
-    //Mobile-menu js
-    function openNav() {
-        jQuery("#mySidenav").css("width", "300px");
-    }
-    function closeNav() {
-        jQuery("#mySidenav").css("width", "0");
-    }
-    });
+    //testimonial slider js
+    
 
     //dealday slider js
     function initializeSlider() {
-        if ($(window).width() <= 1024) {
-            if (!$('.dealday__cards').hasClass('slick-initialized')) {
-                $('.dealday__cards').slick({
+        if (jQuery(window).width() <= 1024) {
+            if (!jQuery('.dealday__cards').hasClass('slick-initialized')) {
+                jQuery('.dealday__cards').slick({
                     dots: true,
                     arrows:false,
                     infinite: true,
@@ -41,8 +35,8 @@ jQuery( document ).ready(function() {
                 });
             }
         } else {
-            if ($('.dealday__cards').hasClass('slick-initialized')) {
-                $('.dealday__cards').slick('unslick');
+            if (jQuery('.dealday__cards').hasClass('slick-initialized')) {
+                jQuery('.dealday__cards').slick('unslick');
             }
         }
     }
@@ -51,3 +45,4 @@ jQuery( document ).ready(function() {
     initializeSlider();
 
 
+});
