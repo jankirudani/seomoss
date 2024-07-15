@@ -1,16 +1,25 @@
 jQuery( document ).ready(function() {
     //Banner slider js
-    jQuery('.testimonial__data, .banner-sliders').slick({
-        infinite: false,
+    jQuery('.banner-sliders').slick({
+        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots:true,
-        arrows:true,
+        arrows:false,
         autoplaySpeed: 2000
     });
 
     //testimonial slider js
-    
+    jQuery('.testimonial__data').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows:true,
+        autoplaySpeed: 2000,
+        dots: true,
+        prevArrow: '<button type="button" class="slick-prev-review"></button>',
+        nextArrow: '<button type="button" class="slick-next-review"></button>'
+    });
 
     //dealday slider js
     function initializeSlider() {
@@ -44,5 +53,46 @@ jQuery( document ).ready(function() {
     // Initialize slider on load
     initializeSlider();
 
+
+    //product tabbing with slider
+    $(document).ready(function() {
+        $('.tab-links a').on('click', function(e) {
+          var currentAttrValue = $(this).attr('href');
+    
+          // Show/Hide Tabs
+          $('.tab-content').hide();
+          $(currentAttrValue).show();
+    
+          // Change/remove current tab to active
+          $('.tab-links li').removeClass('active');
+          $(this).parent('li').addClass('active');
+    
+          e.preventDefault();
+        });
+      });
+
+    $('.dealday__cards-tab').slick({
+        slidesToShow: 3,  
+        slidesToScroll: 3,  
+        dots: true,  
+        arrows: false,
+        infinite: true,  
+        responsive: [
+          {
+            breakpoint: 1024,  
+            settings: {
+              slidesToShow: 2,  
+              slidesToScroll: 2,  
+            }
+          },
+          {
+            breakpoint: 767,  
+            settings: {
+              slidesToShow: 1,  
+              slidesToScroll: 1,  
+            }
+          }
+        ]
+      });
 
 });
