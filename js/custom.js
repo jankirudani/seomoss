@@ -69,9 +69,10 @@ jQuery( document ).ready(function() {
     
           e.preventDefault();
         });
-      });
+    });
 
     $('.dealday__cards-tab').slick({
+        rows: 2,
         slidesToShow: 3,  
         slidesToScroll: 3,  
         dots: true,  

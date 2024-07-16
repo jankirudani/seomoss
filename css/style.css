@@ -1,6 +1,56 @@
-body{
+/* Fonts Css Start */
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../fonts/PlusJakartaSans-Bold.eot');
+    src: url('PlusJakartaSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
+        url('../fonts/PlusJakartaSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../fonts/PlusJakartaSans-Medium.eot');
+    src: url('PlusJakartaSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlusJakartaSans-Medium.woff2') format('woff2'),
+        url('../fonts/PlusJakartaSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../fonts/PlusJakartaSans-ExtraBold.eot');
+    src: url('PlusJakartaSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
+        url('../fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../fonts/PlusJakartaSans-Regular.eot');
+    src: url('PlusJakartaSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
+        url('../fonts/PlusJakartaSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* Fonts Css End */
+
+body {
+    font-family: 'Plus Jakarta Sans';
     margin: 0;
     padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 *{
     outline: none;
@@ -89,12 +139,13 @@ header .main-logo {
 }
 .header-menu ul li a {
     color: #161616;
-    font-family: 'Plus Jakarta Sans';
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 22.68px;
-    letter-spacing: 2%;
+}
+.header-menu ul li:hover a {
+    color: #7DA265;
 }
 .header-menu ul li a.active {
     color: #7DA265;
@@ -133,10 +184,15 @@ header .header-menu-call .contact-button a {
     padding: 15px 32px 20px 32px;
     box-shadow: 0px 12px 26px 0px #7DA2654D;
     color: #fff;
-    font-family: 'Plus Jakarta Sans';
     font-weight: 500;
     font-size: 20px;
     line-height: 25.2px;
+}
+header .header-menu-call .contact-button:hover a {
+    background: transparent;
+    border: 1px solid #7DA265;
+    color:#7DA265;
+    width: fit-content;
 }
 @media only screen and (min-width:1200px) and (max-width:1300px){
     header .header-menu-call .header-contact .shop-logo, header .header-menu-call .header-contact .search-logo{
@@ -150,7 +206,6 @@ header .header-menu-call .contact-button a {
         gap: 18px;
     }
 }
-
 /* Sidebar Menu Start  */
 span img{
     width: 30px;
@@ -171,7 +226,7 @@ header span {
     right: 0;
     background-color: #c2c1c1; 
     overflow-x: hidden; 
-    padding-top: 60px; 
+    padding-top: 150px; 
     transition: 0.5s; 
 }
 .sidenav .header-logo img{
@@ -181,10 +236,8 @@ header span {
     padding: 8px 8px 8px 20px;
     text-decoration: none;
     font-size: 18px;
-    font-family: 'Plus Jakarta Sans';
     color: #161616;
     font-weight: 500;
-
     display: block;
     transition: 0.3s
 }
@@ -248,175 +301,205 @@ box-shadow: 0px 4px 20px 0px #00000014;
     padding: 15px 20px 15px 20px;
     box-shadow: 0px 12px 26px 0px #7DA2654D;
     color: #fff;
-    font-family: 'Plus Jakarta Sans';
     font-weight: 500;
     font-size: 20px;
     line-height: 18px;
     width: fit-content;
     margin-left: 10px;
     margin-top: 30px;
-
+    width: fit-content;
 }
+
 @media only screen and (max-width:375px){
     header .header-logo {
         width: 200px;
     }
 }
 /* Sidebar Menu End  */
-
 /* Header css End  */
 
-/* Footer css start */
-footer {
-    background-color: #000;
-}
-.footer__container {
+/* Banner section ss */
+.banner__container{
     width: 100%;
     max-width: 1470px;
-    padding: 101px 20px 0px 20px;
+    padding: 0px 20px 110px 20px;
     margin: 0 auto;
-}
-.footer__parts {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    justify-content: space-between;
-}
-.footer__logo-main, .footer__quick-links, .footer__infomation {
-    max-width: 33%;
-}
-.footer__logo-main{
-    display: flex;
-    flex-flow: column;
-    gap: 40px;
-}
-.footer__logo {
-    width: 278px;
-}
-.footer__logo-content p {
-    max-width: 412px;
-    font-family: 'Plus Jakarta Sans';
-    font-size: clamp(1rem, 0.925rem + 0.375vw, 1.375rem);
-    font-weight: 500;
-    line-height: 36px;
-    color: #fff;
-}
-.footer__quick-links-title, .footer__infomation-title {
-    font-family: 'Crimson Pro';
-    color: #fff;
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 31.12px;
-    margin-bottom: 31px;
-}
-.footer__quick-links-menu ul li a {
-    font-family: 'Plus Jakarta Sans';
-    font-size: clamp(1rem, 0.925rem + 0.375vw, 1.375rem);
-    color: #fff;
-    font-weight: 500;
-    line-height: 27.72px;
-}
-.footer__quick-links-menu ul {
-    gap: 24px;
-    display: flex;
-    flex-flow: column;
-}
-.footer__quick-links-menu a.active {
-    border-bottom: 2px solid #7DA265;
-    padding-bottom: 1px;
-}
-ul.footer__infomation-menu {
     position: relative;
-    display: flex;
-    flex-flow: column;
-    gap: 24px;
 }
-p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__infomation-menu-time {
-    font-family: 'Plus Jakarta Sans';
-    color: #fff;
-    width: 370px;
-    font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
-    font-weight: 400;
-    line-height: 26px;
+section.banner {
+    background: #f29a4114;
+    position: relative;
 }
-.footer__infomation-menu-location img, .footer__infomation-menu-date img {
-    width: 14px;
-    height: 20px;
-    margin-top: 6px;
+section.banner::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/seamoss.png);
+    background-repeat: no-repeat;
+    height: 328px;
+    width: 1314px;
+    top: 100px;
+    left: 0;
 }
-.footer__infomation-menu-time img {
-    width: 18px;
-    height: 18px;
-    margin-top: 6px;
+section.banner::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/banner-bottom-image.png);
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 492px;
+    bottom: -120px;
+    left: 120px;
 }
-.footer__infomation-menu li {
+.banner__main {
     display: flex;
     flex-flow: row;
-    gap: 18px;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
 }
-.footer__row {
-    border-bottom: 1px solid #FFFFFF33;
-    padding-bottom: 80px;
+.banner__heading {
+    width: calc(50% - 5px);
 }
-.footer__row-copyright p {
-    padding: 22px;
-    font-family: 'Plus Jakarta Sans';
+.banner_images {
+    width: 50%;
+    position: relative;
+    z-index: -1;
+}
+h1.banner__heading-top {
+    font-size: clamp(5rem, 4.3043rem + 3.4783vw, 7.5rem);
+    color: #446FB6;
+    line-height: 151px;
+    font-weight: 600;
+}
+h2.banner_heading-sub {
+    font-weight: 600;
+    color: #161616;
+    font-size: clamp(2.5rem, 2.1522rem + 1.7391vw, 3.75rem);
+    line-height: 75px;
+    width: 992px;
+}
+.banner__shop-btn a.banner-shop {
+    background: #7DA265;
+    border-radius: 70px;
+    padding: 15px 32px 20px 32px;
+    box-shadow: 0px 12px 26px 0px #7DA2654D;
     color: #fff;
-    font-weight: 400;
-    font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25.2px;
+}
+.banner__shop-btn :hover a.banner-shop
+.banner__shop-btn {
+    display: flex;
+    justify-content: center;
+}
+.banner-social-left {
+    position: relative;
+}
+.banner__shop-btn {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.banner__secial-media {
+    display: flex;
+    flex-flow: column;
+    gap: 21px;
+    position: absolute;
+    right: 100px;
+    bottom: 400px;
+    z-index: 9999;
+}
+.social {
+    background: #161616;
+    padding: 14px;
+    height: 46px;
+    width: 46px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+a.banner-email {
+    position: relative;
+}
+a.banner-email:before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/social-top.png);
+    background-repeat: no-repeat;
+    width: 2px;
+    height: 296px;
+    bottom: 30px;
+    left: 7px;
+}
+a.banner-twitter {
+    position: relative;
+}
+a.banner-twitter:before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/social-bottom.png);
+    background-repeat: no-repeat;
+    width: 2px;
+    height: 296px;
+    top: 30px;
+    left: 7px;
+}
+.banner-sliders .slick-dots {
+    position: absolute;
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
     text-align: center;
+    top: 340px;
+    left: 100px;
+    display: flex !important;
+    flex-flow: column !important;
+    width: auto;
 }
-
+@media (max-width:1440px){
+    section.banner::after{
+        height: 200px;
+        width: 1235px;
+    }
+    .banner__secial-media{
+        bottom: 350px;
+    }
+}
+@media (max-width:1200px){
+    .banner__secial-media{
+        display: none;
+    }
+}
 @media (max-width:1024px){
-    .footer__logo-main, .footer__quick-links, .footer__infomation{
-        max-width: 50%;
-        flex: 1 1 50%;
+    h2.banner_heading-sub{
+        width: 100%;
     }
-    .footer__quick-links {
-        padding-left: 30px;
+    .banner__main{
+        display: flex;
+        flex-flow: column;
     }
-    .footer__quick-links-menu ul{
-        gap: 20px;
+    .banner__heading{
+        width: 100%;
     }
-    .footer__infomation{
-        margin-top: 30px;
+    .banner_images{
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
-    .footer__logo-main{
-        gap: 20px;
+    .banner_images img{
+        width: 500px;
     }
-    .footer__row{
-        padding-bottom: 50px;
+    section.banner::before{
+        display: none;
     }
-    .footer__container{
-        padding: 80px 20px 0px 20px;
+    .banner__shop-btn{
+        margin-top: 20px;
     }
-}
-@media (max-width:767px){
-    .footer__logo-main, .footer__quick-links, .footer__infomation{
-        max-width: 100%;
-        flex: 1 1 100%;
-    }
-    .footer__quick-links {
-        padding-left: 0px;
-        margin-top: 30px;
-    }
-    .footer__quick-links-menu ul{
-        gap: 10px;
-    }
-    .footer__logo-content p{
-        max-width: 100%;
-    }
-    .footer__quick-links-title, .footer__infomation-title{
-        margin-bottom: 21px;
-    }
-    ul.footer__infomation-menu{
-        gap: 12px;
-    }
-    .footer__row {
-        padding-bottom: 30px;
-    }
-    .footer__container{
-        padding: 50px 20px 0px 20px;
+    .banner-sliders .slick-dots{
+        display: flex !important;
+        flex-flow: row !important;
     }
 }
 
@@ -431,7 +514,6 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     margin: 0 auto;
 }
 .deal-section__title {
-    font-family: 'Plus Jakarta Sans';
     font-weight: 500;
     font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
     line-height: 71px;
@@ -451,17 +533,14 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     left: 0;
     margin: 0 auto;
 }
-
 .deal-section__title span {
     font-weight: 800;
 }
-
 .deal-section__boxs {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
-
 .deal-card {
     background-color: #fff;
     border: 1px solid #7DA26580;
@@ -474,7 +553,6 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     align-items: center;
     padding: 41px 45px 44px 42px;
 }
-
 .green .deal-card__countdown {
     background-color: #7DA265;
     display: flex;
@@ -484,9 +562,7 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     border-radius: 8px;
     height: 215px;
 }
-
 .deal-card__countdown-item {
-    font-family: 'Plus Jakarta Sans';
     text-align: center;
     color: #ffffff;
     font-size: clamp(1rem, 0.925rem + 0.375vw, 1.375rem);
@@ -494,14 +570,12 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     line-height: 28px;
 }
 .deal-card__countdown-item span {
-    font-family: 'Plus Jakarta Sans';
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
 }
 .deal-card__countdown-item:not(:nth-child(4n)) {
     border-bottom: 1px solid #fff;
-
 }
 .blue .deal-card__countdown {
     background-color: #446FB6;
@@ -512,7 +586,6 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     border-radius: 8px;
     height: 215px;
 }
-
 .deal-card__content {
     text-align: left;
     width: 100%;
@@ -526,7 +599,6 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     margin-bottom: 16px;
     text-align: center;
     max-width: fit-content;
-    font-family: 'Plus Jakarta Sans';
     font-size: 18px;
     line-height: 23px;
 }
@@ -538,7 +610,6 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
 .deal-card__info h3 {
     font-size: clamp(1rem, 0.9304rem + 0.3478vw, 1.25rem);
     margin: 0 0 8px 0;
-    font-family: 'Plus Jakarta Sans';
     font-weight: 600;
     line-height: 30px;
     width: 233px;
@@ -547,7 +618,6 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
 .deal-card__info p {
     color: #6A6A6A;
     margin-bottom: 26px;
-    font-family: 'Plus Jakarta Sans';
     font-size: clamp(0.75rem, 0.6804rem + 0.3478vw, 1rem);
     font-weight: 400;
     line-height: 26px;
@@ -560,7 +630,6 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     text-decoration: none;
     border-radius: 4px;
     display: inline-block;
-    font-family: 'Plus Jakarta Sans';
     font-size: 18px;
     font-weight: 600;
     line-height: 23px;
@@ -574,7 +643,6 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     margin-bottom: 16px;
     text-align: center;
     max-width: fit-content;
-    font-family: 'Plus Jakarta Sans';
     font-size: 18px;
     line-height: 23px;
 }
@@ -585,12 +653,10 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     text-decoration: none;
     border-radius: 4px;
     display: inline-block;
-    font-family: 'Plus Jakarta Sans';
     font-size: 18px;
     font-weight: 600;
     line-height: 23px;
 }
-
 @media (max-width:1200px){
     .deal-card{
         display: flex;
@@ -700,7 +766,6 @@ h2.about__heading-title:before{
     margin: 0 auto;
 }
 h2.about__heading-title {
-    font-family: 'Plus Jakarta Sans';
     font-weight: 500;
     font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
     line-height: 71px;
@@ -714,7 +779,6 @@ h2.about__heading-title {
 }
 p.about__sub-heading {
     font-weight: 500;
-    font-family: 'Plus Jakarta Sans';
     font-size: clamp(1.625rem, 1.4511rem + 0.8696vw, 2.25rem);
     line-height: 52px;
     width: 606px;
@@ -722,7 +786,6 @@ p.about__sub-heading {
     margin-bottom: 12px;
 }
 p.about__full-content {
-    font-family: 'Plus Jakarta Sans';
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
@@ -736,12 +799,15 @@ a.about_more-btn {
     padding: 15px 32px 20px 32px;
     box-shadow: 0px 12px 26px 0px #7DA2654D;
     color: #fff;
-    font-family: 'Plus Jakarta Sans';
     font-weight: 500;
     font-size: 20px;
     line-height: 25.2px;
 }
-
+.about__button:hover a.about_more-btn {
+    background: transparent;
+    border: 1px solid #7DA265;
+    color: #7DA265;
+}
 @media (max-width:1200px){
     section.about-section:before, .about__image:before{
         display: none;
@@ -791,7 +857,6 @@ section.dealday-section {
     margin: 0 auto;
 }
 .dealday-section__title {
-    font-family: 'Plus Jakarta Sans';
     font-weight: 600;
     font-size: clamp(2.5rem, 2.2217rem + 1.3913vw, 3.5rem);
     line-height: 71px;
@@ -800,13 +865,11 @@ section.dealday-section {
     position: relative;
     text-align: center;
 }
-
 .dealday__cards {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
-
 .product-card {
     border-radius: 10px;
     overflow: hidden;
@@ -820,19 +883,15 @@ section.dealday-section {
     box-shadow: 0px 18px 50px 0px #0000000A;
     border-radius: 16px;
 }
-
 .product-description {
-    font-family: 'Plus Jakarta Sans';
     color: #161616;
     font-size: 22px;
     line-height: 34px;
     font-weight: 600;
     margin-bottom: 14px;
 }
-
 .product-price {
     color: #6A6A6A;
-    font-family: 'Plus Jakarta Sans';
     font-size: 18px;
     font-weight: 700;
     line-height: 23px;
@@ -840,7 +899,6 @@ section.dealday-section {
 }
 a.product-shop {
     color: #161616;
-    font-family: 'Plus Jakarta Sans';
     font-weight: 700;
     font-size: 22px;
     line-height: 28px;
@@ -851,7 +909,6 @@ a.product-shop {
 .product-card:hover a.product-shop{
     color: #7DA265;
 }
-
 .slick-dots li button:before{
     background-color: #7DA265;
     height: 12px;
@@ -882,7 +939,6 @@ a.product-shop {
     }
 }
 
-
 /* Gallery section css */
 .gallery__container {
     width: 100%;
@@ -891,8 +947,7 @@ a.product-shop {
     margin: 0 auto;
 }
 .gallery-section__title {
-    font-family: 'Plus Jakarta Sans';
-    font-weight: 600;
+    font-weight: 500;
     font-size: clamp(2.5rem, 2.2217rem + 1.3913vw, 3.5rem);
     line-height: 71px;
     color: #0E0E0E;
@@ -920,21 +975,18 @@ a.product-shop {
     width: 50%;
 }
 .gallery__date {
-    font-family: 'Plus Jakarta Sans';
     color: #6A6A6A;
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
 }
 h4.gallery__title {
-    font-family: 'Plus Jakarta Sans';
     font-size: clamp(1.25rem, 1.0816rem + 0.8421vw, 1.75rem);
     font-weight: 600;
     line-height: 40px;
     color: #161616;
 }
 p.gallery__desc {
-    font-family: 'Plus Jakarta Sans';
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -992,7 +1044,6 @@ section.gallery-section::before {
     bottom: 50px;
     left: 0;
 }
-
 @media (max-width:1200px){
     section.gallery-section::before{
         display: none;
@@ -1036,185 +1087,170 @@ section.gallery-section::before {
     }
 }
 
-
-/* Banner section ss */
-.banner__container{
-    width: 100%;
+/* Product section css */
+.product__container{
     max-width: 1470px;
-    padding: 0px 20px 110px 20px;
+    padding: 120px 100px;
+    background-color: #446FB60F;
+    border-radius: 40px;
     margin: 0 auto;
-    position: relative;
 }
-section.banner {
-    background: #f29a4114;
+h2.product-section__title {
+    font-weight: 500;
+    font-size: clamp(2.5rem, 2.2217rem + 1.3913vw, 3.5rem);
+    line-height: 71px;
+    color: #161616;
     position: relative;
+    width: 849px;
+    text-transform: capitalize;
+    margin-top: 30px;
 }
-section.banner::after{
-    content: "";
+h2.product-section__title::before{
     position: absolute;
-    background-image: url(../images/seamoss.png);
+    content: "";
+    background-image: url(../images/tree.png);
     background-repeat: no-repeat;
-    height: 328px;
-    width: 1314px;
-    top: 100px;
+    top: -35px;
+    height: 85px;
+    width: 85px;
+    right: 0;
     left: 0;
 }
-section.banner::before{
-    content: "";
-    position: absolute;
-    background-image: url(../images/banner-bottom-image.png);
-    background-repeat: no-repeat;
-    height: 480px;
-    width: 492px;
-    bottom: -120px;
-    left: 120px;
+.product-section__title span {
+    font-weight: 800;
 }
-.banner__main {
+.product-card-tab:hover p {
+    color: #7DA265;
+}
+.tab-content{
+    height: 100%;
+    float: left;
+    width: calc(70% - 30px);
+    animation: anime 1s; 
+    margin-top: 62px;
+}
+img.product-image-tab {
+    width: 232px;
+    height: 228px;
+    margin-left: 20px;
+}
+.product-info-tab {
+    padding: 45px 20px 20px;
+    background-color: #fff;
+    height: 217px;
+    width: 273px;
+    margin-top: -178px;
+    box-shadow: 0px 18px 50px 0px #0000000A;
+    border-radius: 16px;
+    margin-bottom: 22px;
+}
+.dealday__cards-tab {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    justify-content: center;
+}
+p.product-description-tab, p.product-price-tab {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #161616;
+    width: 273px;
+    margin-bottom: 18px;
+}
+.vertical-tabs {
     display: flex;
     flex-flow: row;
-    gap: 10px;
-    width: 100%;
-    align-items: center;
+    gap: 60px;
 }
-.banner__heading {
-    width: calc(50% - 5px);
-}
-.banner_images {
-    width: 50%;
-    position: relative;
-    z-index: -1;
-}
-h1.banner__heading-top {
-    font-size: clamp(5rem, 4.3043rem + 3.4783vw, 7.5rem);
-    color: #446FB6;
-    font-family: 'Plus Jakarta Sans';
-    line-height: 151px;
-    font-weight: 600;
-}
-h2.banner_heading-sub {
-    font-weight: 600;
-    color: #161616;
-    font-family: 'Plus Jakarta Sans';
-    font-size: clamp(2.5rem, 2.1522rem + 1.7391vw, 3.75rem);
-    line-height: 75px;
-    width: 992px;
-}
-
-a.banner-shop {
-    background: #7DA265;
-    border-radius: 70px;
-    padding: 15px 32px 20px 32px;
-    box-shadow: 0px 12px 26px 0px #7DA2654D;
-    color: #fff;
-    font-family: 'Plus Jakarta Sans';
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 25.2px;
-}
-.banner__shop-btn {
-    display: flex;
-    justify-content: center;
-}
-.banner-social-left {
-    position: relative;
-}
-.banner__secial-media {
-    display: flex;
-    flex-flow: column;
-    gap: 21px;
-    position: absolute;
-    right: 100px;
-    bottom: 400px;
-    z-index: 9999;
-}
-.social {
-    background: #161616;
-    padding: 14px;
-    height: 46px;
-    width: 46px;
-    display: flex;
-    justify-content: center;
-    border-radius: 50px;
-}
-a.banner-email {
-    position: relative;
-}
-a.banner-email:before{
-    content: "";
-    position: absolute;
-    background-image: url(../images/social-top.png);
-    background-repeat: no-repeat;
-    width: 2px;
-    height: 296px;
-    bottom: 30px;
-    left: 7px;
-
-}
-a.banner-twitter {
-    position: relative;
-}
-a.banner-twitter:before{
-    content: "";
-    position: absolute;
-    background-image: url(../images/social-bottom.png);
-    background-repeat: no-repeat;
-    width: 2px;
-    height: 296px;
-    top: 30px;
-    left: 7px;
-
-}
-.banner-sliders .slick-dots {
-    position: absolute;
-    display: block;
+.tab-links {
+    list-style-type: none;
     padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    top: 340px;
-    left: 100px;
-    display: flex !important;
-    flex-flow: column !important;
+    margin-top: 142px;
+    width: 30%;
 }
-
+.tab-links li {
+    margin-bottom: 22px;
+}
+.tab-links a {
+    display: block !important;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: left;
+    color: #6A6A6A;
+    cursor: pointer;
+}
+.tab-links li.active a {
+    color: #7DA265;
+    margin-left: 10px;
+}
+.vertical-tabs .slick-dots{
+    text-align: left;
+}
+@media (max-width:1500px){
+    .product__container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
 @media (max-width:1440px){
-    section.banner::after{
-        height: 200px;
-        width: 1235px;
+    .vertical-tabs{ 
+        gap: 30px;
     }
-    .banner__secial-media{
-        bottom: 350px;
+    .tab-links{
+        width: 20%;
     }
-}
-@media (max-width:1200px){
-    .banner__secial-media{
-        display: none;
+    .tab-content{
+        width: calc(80% - 15px);
+    }
+    .tab-links a{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .tab-links li{
+        margin-bottom: 16px;
     }
 }
 @media (max-width:1024px){
-    h2.banner_heading-sub{
+    .product__container{
+        padding: 80px 60px;
+    }
+    h2.product-section__title{
         width: 100%;
     }
-    .banner__main{
+    .tab-links{
+        width: 30%;
+    }
+    .tab-content {
+        width: calc(70% - 15px);
+    }
+}
+@media (max-width:800px){
+    h2.product-section__title{
+        line-height: 50px;
+    }
+}
+@media (max-width:767px){
+    .product__container{
+        padding: 80px 30px;
+    }
+    .vertical-tabs{
         display: flex;
         flex-flow: column;
     }
-    .banner__heading{
+    .tab-links {
         width: 100%;
+        margin-top: 80px;
     }
-    .banner_images{
-        display: flex;
-        justify-content: center;
+    .tab-content {
         width: 100%;
     }
     .banner_images img{
-        width: 500px;
+        width: 100%;
     }
-    section.banner::before{
-        display: none;
-    }
-    .banner__shop-btn{
-        margin-top: 20px;
+    h2.banner_heading-sub{
+        line-height: 50px;
     }
 }
 
@@ -1233,7 +1269,6 @@ section.testimonial-section::before{
     right: 0;
     bottom: -220px;
 }
-
 .testimonial__container{
     width: 100%;
     max-width: 1270px;
@@ -1241,8 +1276,7 @@ section.testimonial-section::before{
     margin: 0 auto;
 }
 h2.testimonial-section__title {
-    font-family: 'Plus Jakarta Sans';
-    font-weight: 600;
+    font-weight: 500;
     font-size: clamp(2.5rem, 2.2217rem + 1.3913vw, 3.5rem);
     line-height: 71px;
     color: #0E0E0E;
@@ -1270,7 +1304,6 @@ h2.testimonial-section__title::before {
     justify-content: center;
 }
 .testimonial__client-name {
-    font-family: 'Plus Jakarta Sans';
     font-weight: 600;
     font-size: 28px;
     line-height: 40px;
@@ -1282,14 +1315,12 @@ h2.testimonial-section__title::before {
     margin-bottom: 30px;
 }
 .testimonial__client-review-content {
-    font-family: 'Plus Jakarta Sans';
     color: #6A6A6A;
     font-size: 20px;
     font-weight: 500;
     line-height: 32px;
     width: 526px;
 }
-
 .testimonial__data .slick-list {
     width: 100%;
 }
@@ -1316,7 +1347,6 @@ h2.testimonial-section__title::before {
     cursor: pointer;
     border: 1px solid #ffffff;
 }
-
 .testimonial__data .slick-prev-review {
     content: "";
     position: absolute;
@@ -1324,6 +1354,7 @@ h2.testimonial-section__title::before {
     background-repeat: no-repeat;
     background-position: center;
     left: 10px;
+    z-index: 1;
 }
 .testimonial__data .slick-next-review {
     content: "";
@@ -1333,7 +1364,6 @@ h2.testimonial-section__title::before {
     background-position: center;
     right: 10px;
 }
-
 @media (max-width:1200px){
     section.testimonial-section::before{
         display: none;
@@ -1357,7 +1387,7 @@ h2.testimonial-section__title::before {
         padding: 80px 20px;
     }
     .testimonial__data .slick-next-review, .testimonial__data .slick-prev-review{
-        display: none;
+        display: none !important;
     }
 }
 @media (max-width:425px){
@@ -1365,7 +1395,6 @@ h2.testimonial-section__title::before {
         padding: 50px 20px;
     }
 }
-
 
 /* Newsletter section css */
 section.newsletter-section{
@@ -1411,7 +1440,6 @@ section.newsletter-section::before{
     width: 55%;
 }
 h2.newsletter-section__title {
-    font-family: 'Plus Jakarta Sans';
     font-weight: 500;
     font-size: clamp(2.5rem, 2.2217rem + 1.3913vw, 3.5rem);
     line-height: 71px;
@@ -1431,7 +1459,6 @@ h2.newsletter-section__title::before{
     margin: 0 auto;
 }
 .newsletter-section__subtitle {
-    font-family: 'Plus Jakarta Sans';
     color: #171717;
     font-size: clamp(1.875rem, 1.7487rem + 0.6316vw, 2.25rem);
     font-weight: 500;
@@ -1439,7 +1466,6 @@ h2.newsletter-section__title::before{
     margin-bottom: 13px;
 }
 p.newsletter-section__content {
-    font-family: 'Plus Jakarta Sans';
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -1451,7 +1477,6 @@ p.newsletter-section__content {
     border-radius: 16px;
     padding: 60px;
 }
-
 input[type=text], input[type=email], textarea {
     width: 100%;
     padding: 12px;
@@ -1462,13 +1487,11 @@ input[type=text], input[type=email], textarea {
     margin-bottom: 20px;
     resize: vertical;
 }
-
-    input[type=text]:focus, input[type=email]:focus, textarea:focus{
+input[type=text]:focus, input[type=email]:focus, textarea:focus
+{
     border: 1px solid #151515;
 }
-  
 input[type=submit] {
-    font-family: Plus Jakarta Sans;
     font-size: 20px;
     font-weight: 500;
     line-height: 25.2px;
@@ -1481,24 +1504,19 @@ input[type=submit] {
     box-shadow: 0px 12px 26px 0px #7DA2654D;
     margin-top: 50px;
 }
-
 input::placeholder,
 textarea::placeholder {
     color: #000000;
-    font-family: 'Plus Jakarta Sans';
     size: 14px;
     font-weight: 400;
     line-height: 17px;
 }
-
 label.term {
     color: #000000;
-    font-family: 'Plus Jakarta Sans';
     size: 16px;
     font-weight: 400;
     line-height: 20px;
 }
-
 @media (max-width:1200px){
     section.newsletter-section::before{
         display: none;
@@ -1535,158 +1553,151 @@ label.term {
     }
 }
 
-
-/* Product section css */
-.product__container{
+/* Footer css start */
+footer {
+    background-color: #000;
+}
+.footer__container {
+    width: 100%;
     max-width: 1470px;
-    padding: 120px 100px;
-    background-color: #446FB60F;
-    border-radius: 40px;
+    padding: 101px 20px 0px 20px;
     margin: 0 auto;
-    height: 1410px;
 }
-h2.product-section__title {
-    font-family: 'Plus Jakarta Sans';
-    font-weight: 500;
-    font-size: clamp(2.5rem, 2.2217rem + 1.3913vw, 3.5rem);
-    line-height: 71px;
-    color: #161616;
-    position: relative;
-    width: 849px;
-    text-transform: capitalize;
-    margin-top: 30px;
-}
-h2.product-section__title::before{
-    position: absolute;
-    content: "";
-    background-image: url(../images/tree.png);
-    background-repeat: no-repeat;
-    top: -35px;
-    height: 85px;
-    width: 85px;
-    right: 0;
-    left: 0;
-}
-.product-section__title span {
-    font-weight: 800;
-}
-
-
-.tab-content{
-    height: 100%;
-    float: left;
-    width: calc(70% - 30px);
-    animation: anime 1s; 
-    margin-top: 62px;
-}
-
-@keyframes anime {
-    from{opacity: 0}
-    to{opacity: 1}
-}
-
-img.product-image-tab {
-    width: 232px;
-    height: 228px;
-    margin-left: 20px;
-}
-.product-info-tab {
-    padding: 45px 20px 20px;
-    background-color: #fff;
-    height: 217px;
-    width: 273px;
-    margin-top: -178px;
-    box-shadow: 0px 18px 50px 0px #0000000A;
-    border-radius: 16px;
-    margin-bottom: 22px;
-}
-.dealday__cards-tab {
+.footer__parts {
     display: flex;
     flex-flow: row wrap;
-    gap: 20px;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
 }
-p.product-description-tab, p.product-price-tab {
-    font-family: Plus Jakarta Sans;
-    font-size: 18px;
+.footer__logo-main, .footer__quick-links, .footer__infomation {
+    max-width: 33%;
+}
+.footer__logo-main{
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+}
+.footer__logo {
+    width: 278px;
+}
+.footer__logo-content p {
+    max-width: 412px;
+    font-size: clamp(1rem, 0.925rem + 0.375vw, 1.375rem);
+    font-weight: 500;
+    line-height: 36px;
+    color: #fff;
+}
+.footer__quick-links-title, .footer__infomation-title {
+    font-family: 'Crimson Pro';
+    color: #fff;
+    font-size: 28px;
     font-weight: 600;
-    line-height: 28px;
-    color: #161616;
-    width: 273px;
-    margin-bottom: 18px;
+    line-height: 31.12px;
+    margin-bottom: 31px;
 }
-.vertical-tabs {
+.footer__quick-links-menu ul li a {
+    font-size: clamp(1rem, 0.925rem + 0.375vw, 1.375rem);
+    color: #fff;
+    font-weight: 500;
+    line-height: 27.72px;
+}
+.footer__quick-links-menu ul {
+    gap: 24px;
+    display: flex;
+    flex-flow: column;
+}
+.footer__quick-links-menu a.active {
+    border-bottom: 2px solid #7DA265;
+    padding-bottom: 1px;
+}
+ul.footer__infomation-menu {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+}
+p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__infomation-menu-time {
+    color: #fff;
+    width: 370px;
+    font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+    font-weight: 400;
+    line-height: 26px;
+}
+.footer__infomation-menu-location img, .footer__infomation-menu-date img {
+    width: 14px;
+    height: 20px;
+    margin-top: 6px;
+}
+.footer__infomation-menu-time img {
+    width: 18px;
+    height: 18px;
+    margin-top: 6px;
+}
+.footer__infomation-menu li {
     display: flex;
     flex-flow: row;
-    gap: 60px;
+    gap: 18px;
 }
-
-.tab-links {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 142px;
-    width: 30%;
+.footer__row {
+    border-bottom: 1px solid #FFFFFF33;
+    padding-bottom: 80px;
 }
-
-.tab-links li {
-    margin-bottom: 22px;
+.footer__row-copyright p {
+    padding: 22px;
+    color: #fff;
+    font-weight: 400;
+    font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+    text-align: center;
 }
-
-.tab-links a {
-    display: block !important;
-    font-family: Plus Jakarta Sans;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 40px;
-    text-align: left;
-    color: #6A6A6A;
-    cursor: pointer;
-}
-  
-.tab-links li.active a {
-    color: #7DA265;
-    margin-left: 10px;
-}
-  
-.vertical-tabs .slick-dots{
-    text-align: left;
-}
-
-@media (max-width:1440px){
-    .vertical-tabs{ 
-        gap: 30px;
-    }
-    .tab-links{
-        width: 20%;
-    }
-    .tab-content{
-        width: calc(80% - 15px);
-    }
-    .tab-links a{
-        font-size: 15px;
-        line-height: 23px;
-    }
-    .tab-links li{
-        margin-bottom: 16px;
-    }
-}
-
 @media (max-width:1024px){
-    .product__container{
-        padding: 80px 60px;
+    .footer__logo-main, .footer__quick-links, .footer__infomation{
+        max-width: 50%;
+        flex: 1 1 50%;
     }
-    h2.product-section__title{
-        width: 100%;
+    .footer__quick-links {
+        padding-left: 30px;
     }
-}
-@media (max-width:800px){
-    h2.product-section__title{
-        line-height: 50px;
+    .footer__quick-links-menu ul{
+        gap: 20px;
+    }
+    .footer__infomation{
+        margin-top: 30px;
+    }
+    .footer__logo-main{
+        gap: 20px;
+    }
+    .footer__row{
+        padding-bottom: 50px;
+    }
+    .footer__container{
+        padding: 80px 20px 0px 20px;
     }
 }
 @media (max-width:767px){
-    .product__container{
-        padding: 80px 30px;
+    .footer__logo-main, .footer__quick-links, .footer__infomation{
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    .footer__quick-links {
+        padding-left: 0px;
+        margin-top: 30px;
+    }
+    .footer__quick-links-menu ul{
+        gap: 10px;
+    }
+    .footer__logo-content p{
+        max-width: 100%;
+    }
+    .footer__quick-links-title, .footer__infomation-title{
+        margin-bottom: 21px;
+    }
+    ul.footer__infomation-menu{
+        gap: 12px;
+    }
+    .footer__row {
+        padding-bottom: 30px;
+    }
+    .footer__container{
+        padding: 50px 20px 0px 20px;
     }
 }
-
