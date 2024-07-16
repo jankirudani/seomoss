@@ -1252,6 +1252,9 @@ p.product-description-tab, p.product-price-tab {
     h2.banner_heading-sub{
         line-height: 50px;
     }
+    .vertical-tabs{
+        gap: 0px;
+    }
 }
 
 /* Testimonial section css */
