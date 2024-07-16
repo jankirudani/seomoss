@@ -1504,12 +1504,12 @@ input[type=submit] {
     box-shadow: 0px 12px 26px 0px #7DA2654D;
     margin-top: 50px;
 }
-input::placeholder,
-textarea::placeholder {
+input::placeholder, textarea::placeholder {
     color: #000000;
     size: 14px;
     font-weight: 400;
     line-height: 17px;
+    font-family: 'Plus Jakarta Sans';
 }
 label.term {
     color: #000000;
@@ -1546,11 +1546,15 @@ label.term {
     .newsletter__form{
         padding: 25px;
     }
+    .newsletter-section__subtitle{
+        line-height: 42px;
+    }
 }
 @media (max-width:425px){
     .newsletter__container{
         padding: 50px 20px;
     }
+
 }
 
 /* Footer css start */
