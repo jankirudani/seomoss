@@ -1,13 +1,14 @@
 jQuery( document ).ready(function() {
 
-  jQuery('li.gallery__tab').hover(
+  jQuery('li .gallery__info-box').hover(
     function() {
-      $(this).addClass('pop');
+        jQuery('li .gallery__info-box').removeClass('pop');
+      
+        jQuery(this).addClass('pop');
     },
     function() {
-      $(this).removeClass('pop');
     }
-  );
+);
 
   //Banner slider js
   jQuery('.banner-sliders').slick({
@@ -61,61 +62,93 @@ jQuery( document ).ready(function() {
   }
   initializeSlider();
 
-  //product tabbing with slider
-  $(document).ready(function() {
-    $('.tab-links a').on('click', function(e) {
-      var currentAttrValue = $(this).attr('href');
-
-      $('.tab-content').hide();
-      $(currentAttrValue).show();
-
-      $('.tab-links li').removeClass('active');
-      $(this).parent('li').addClass('active');
-
-      e.preventDefault();
-    });
-  });
-  $(document).ready(function() {
-    $('.tab-links a').on('hover', function(e) {
-      var currentAttrValue = $(this).attr('href');
-
-      $('.tab-content').hide();
-      $(currentAttrValue).show();
 
 
-
-      
-
-      $('.tab-links li').removeClass('active');
-      $(this).parent('li').addClass('active');
-
-      e.preventDefault();
-    });
-  });
-
-  $('.dealday__cards-tab').slick({
-    rows: 2,
-    slidesToShow: 3,  
-    slidesToScroll: 3,  
-    dots: true,  
-    arrows: false,
-    infinite: true,  
-    responsive: [
-      {
-        breakpoint: 1024,  
-        settings: {
-          slidesToShow: 2,  
-          slidesToScroll: 2,  
+  //Tabbing new 
+  // init Isotope
+    var slickoptions = {
+      rows: 2,
+      dots: true,
+      arrows: false,
+      appendDots: $('.slick-nav'),
+      appendArrows: $('.slick-nav'),
+      accessibility: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+              rows: 2,
+              slidesPerRow: 2,
+              slidesToScroll: 2,
+              slidesToShow: 1,
+              dots: true
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+              rows: 2,
+              slidesToScroll: 1,
+              slidesToShow: 2,
+              dots: true
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+              rows: 4,
+              slidesPerRow: 1,
+              slidesToScroll: 1,
+              slidesToShow: 1,
+              dots: true
+          }
         }
-      },
-      {
-        breakpoint: 767,  
-        settings: {
-          slidesToShow: 1,  
-          slidesToScroll: 1,  
-        }
-      }
     ]
-  });
+    }
+
+    $(document).ready(function () {
+    $('.slider2').slick(slickoptions);
+
+    var slider = $('.slider2');
+    var allSlides = $('.slick-slide > div > *').clone();
+    var trigger = $('js-filter');
+
+
+    var ClassFilter = function (object, item) {
+      this.object = object;
+      this.item = item;
+
+      this.filterFunc = function () {
+        $('.active').removeClass('active');
+        $('.js-filter[data-filter="'+this.item+'"]').addClass('active');
+        var filterSlides = allSlides.filter(this.item);
+      
+    slider.css({"opacity": "0","left": "50px"});
+    setTimeout(
+    function(){
+      slider
+      .slick('unslick')
+      .empty()
+      .append(filterSlides)
+      .slick(slickoptions)
+      .css({"opacity": "100","left": "0px"})
+    }, 600);	
+      }
+    }
+
+    jQuery('.js-filter').on('click', function (e) {
+    var attr = jQuery(this).attr('data-filter')
+    var newFilter = new ClassFilter(this, attr);
+        newFilter.filterFunc();
+    });
+
+    });
+
+
+  
 
 });
