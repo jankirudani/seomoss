@@ -1,14 +1,22 @@
 jQuery( document ).ready(function() {
 
+  //Mobile-menu js
+    function openNav() {
+      jQuery("#mySidenav").css("width", "300px");
+  }
+  function closeNav() {
+      jQuery("#mySidenav").css("width", "0");
+  }
+
+  //Gallery sticky
   jQuery('li .gallery__info-box').hover(
     function() {
         jQuery('li .gallery__info-box').removeClass('pop');
-      
         jQuery(this).addClass('pop');
     },
     function() {
     }
-);
+  );
 
   //Banner slider js
   jQuery('.banner-sliders').slick({
@@ -114,7 +122,7 @@ jQuery( document ).ready(function() {
     $('.slider2').slick(slickoptions);
 
     var slider = $('.slider2');
-    var allSlides = $('.slick-slide > div > *').clone();
+    var allSlides = $('.slick-slide > div > .all').clone();
     var trigger = $('js-filter');
 
 
@@ -148,7 +156,6 @@ jQuery( document ).ready(function() {
 
     });
 
-
-  
+   
 
 });

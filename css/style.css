@@ -96,6 +96,11 @@ header {
     width: 100%;
     background: #f29a4114;
 }
+header.active_sticky {
+    z-index: 9999 !important;
+    position: fixed !important;
+    background-color: #ff9900ac;
+}
 header .main-header {
     width: 100%;
     display: flex;
