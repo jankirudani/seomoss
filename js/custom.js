@@ -1,4 +1,58 @@
 jQuery( document ).ready(function() {
+
+  //gallery section
+  jQuery(document).ready(function ($) {
+    const items = $(".animate-swap-tabs__item");
+
+    function switchTab(index) {
+        let current_Item = $(items[index]).attr("data-item");
+        let left_translateY = $(items[index]).attr("data-ly");
+        let right_translateY = $(items[index]).attr("data-ry");
+
+        $(items[index]).addClass("animate-swap-tabs__item--active");
+        $(items[index]).siblings().removeClass("animate-swap-tabs__item--active");
+
+        setTimeout(() => {
+            $(".animate-swap-tabs__screen-image-box." + current_Item).css({
+                visibility: "visible",
+                opacity: "1",
+            });
+            $(".animate-swap-tabs__object-image-box." + current_Item).css({
+                opacity: "1",
+                transform: "translateY(0) scale(1) translateZ(0px)",
+            });
+            $(".animate-swap-tabs__screen-image-box." + current_Item)
+                .siblings()
+                .css({
+                    opacity: "0",
+                });
+        }, 200);
+
+        // Animate the transformation of siblings
+        $(".animate-swap-tabs__object-image-box")
+            .not("." + current_Item)
+            .css({
+                opacity: "0",
+                transform: "translateY(-75px) scale(0.8) translateZ(0px)",
+            });
+
+        $(".animate-swap-tabs__left-shape").css(
+            "transform",
+            "translateY(" + left_translateY + ") translateZ(0px)"
+        );
+        $(".animate-swap-tabs__right-shape").css(
+            "transform",
+            "translateY(" + right_translateY + ") translateZ(0px)"
+        );
+    }
+
+    items.hover(function () {
+        const currentIndex = $(this).index();
+        switchTab(currentIndex);
+    });
+});
+
+
   //Gallery sticky
   jQuery('li .gallery__info-box').hover(
     function() {
