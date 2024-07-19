@@ -1229,6 +1229,9 @@ p.product-description-tab, p.product-price-tab {
     transition: all 500ms ease;
     margin-top: 82px;
 }
+.slider2 .slick-dots{
+    text-align: left;
+}
 .button.js-filter{
     padding-bottom: 22px;
     color: #6A6A6A;

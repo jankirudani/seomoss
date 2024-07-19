@@ -78,8 +78,7 @@ jQuery( document ).ready(function() {
       rows: 2,
       dots: true,
       arrows: false,
-      appendDots: $('.slick-nav'),
-      appendArrows: $('.slick-nav'),
+     
       accessibility: true,
       speed: 300,
       slidesToShow: 3,
@@ -108,7 +107,7 @@ jQuery( document ).ready(function() {
         {
           breakpoint: 480,
           settings: {
-              rows: 4,
+              rows: 1,
               slidesPerRow: 1,
               slidesToScroll: 1,
               slidesToShow: 1,
