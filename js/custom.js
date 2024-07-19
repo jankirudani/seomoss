@@ -1,13 +1,4 @@
 jQuery( document ).ready(function() {
-
-  //Mobile-menu js
-    function openNav() {
-      jQuery("#mySidenav").css("width", "300px");
-  }
-  function closeNav() {
-      jQuery("#mySidenav").css("width", "0");
-  }
-
   //Gallery sticky
   jQuery('li .gallery__info-box').hover(
     function() {
@@ -53,11 +44,11 @@ jQuery( document ).ready(function() {
           slidesToScroll: 1,
           responsive: [
             {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+              breakpoint: 767,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+              }
             }
           ]
         });
@@ -78,7 +69,6 @@ jQuery( document ).ready(function() {
       rows: 2,
       dots: true,
       arrows: false,
-     
       accessibility: true,
       speed: 300,
       slidesToShow: 3,
@@ -88,30 +78,30 @@ jQuery( document ).ready(function() {
         {
           breakpoint: 1024,
           settings: {
-              rows: 2,
-              slidesPerRow: 2,
-              slidesToScroll: 2,
-              slidesToShow: 1,
-              dots: true
+            rows: 2,
+            slidesPerRow: 2,
+            slidesToScroll: 2,
+            slidesToShow: 1,
+            dots: true
           }
         },
         {
           breakpoint: 768,
           settings: {
-              rows: 2,
-              slidesToScroll: 1,
-              slidesToShow: 2,
-              dots: true
+            rows: 2,
+            slidesToScroll: 1,
+            slidesToShow: 2,
+            dots: true
           }
         },
         {
           breakpoint: 480,
           settings: {
-              rows: 1,
-              slidesPerRow: 1,
-              slidesToScroll: 1,
-              slidesToShow: 1,
-              dots: true
+            rows: 1,
+            slidesPerRow: 1,
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            dots: true
           }
         }
     ]

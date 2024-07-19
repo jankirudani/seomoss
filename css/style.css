@@ -1238,6 +1238,8 @@ p.product-description-tab, p.product-price-tab {
     font-size: 20px;
     font-weight: 600;
     line-height: 40px;
+    cursor: pointer;
+    width: fit-content;
 }
 .button.js-filter.active {
     color: #7DA265;
