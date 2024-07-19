@@ -1,5 +1,13 @@
 jQuery( document ).ready(function() {
 
+  //Mobile-menu js
+  function openNav() {
+    jQuery("#mySidenav").css("width", "300px");
+    }
+    function closeNav() {
+        jQuery("#mySidenav").css("width", "0");
+    }
+
   //gallery section
   jQuery(document).ready(function ($) {
     const items = $(".animate-swap-tabs__item");
