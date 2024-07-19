@@ -662,14 +662,17 @@ a.banner-twitter:before{
 .deal-card__countdown-item:not(:nth-child(4n)) {
     border-bottom: 1px solid #fff;
 }
-.blue .deal-card__countdown {
-    background-color: #446FB6;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    padding: 12px;
-    border-radius: 8px;
-    height: 215px;
+.blue .deal-card__discount {
+    background-color: #446FB624;;
+    color: #446FB6;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+    max-width: fit-content;
+    font-size: 18px;
+    line-height: 23px;
 }
 .deal-card__content {
     text-align: left;
