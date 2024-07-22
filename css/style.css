@@ -1315,12 +1315,24 @@ p.product-description-tab, p.product-price-tab {
     line-height: 40px;
     cursor: pointer;
     width: fit-content;
+    position: relative;
 }
-.button.js-filter.active {
+.button.js-filter.active{
     color: #7DA265;
     margin-left: 10px;
     transition: all 1s ease-out;
 }
+.button.js-filter.active::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/product-active-line.png);
+    height: 15px;
+    width: 100%;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: -30px;
+}
+
 .slick-slide{
     position: relative;
 }
