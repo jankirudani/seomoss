@@ -126,87 +126,90 @@ jQuery( document ).ready(function() {
 
 
   //Tabbing new 
-  // init Isotope
-    var slickoptions = {
-      rows: 2,
-      dots: true,
-      arrows: false,
-      accessibility: true,
-      speed: 300,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      infinite: false,
-      responsive: [
+  // Slick slider options
+  var slickoptions = {
+    rows: 2,
+    dots: true,
+    arrows: false,
+    accessibility: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    infinite: false,
+    responsive: [
         {
-          breakpoint: 1024,
-          settings: {
-            rows: 2,
-            slidesPerRow: 2,
-            slidesToScroll: 2,
-            slidesToShow: 1,
-            dots: true
-          }
+            breakpoint: 1300,
+            settings: {
+                rows: 2,
+                slidesToScroll: 1,
+                slidesToShow: 2,
+                dots: true
+            }
         },
         {
-          breakpoint: 768,
-          settings: {
-            rows: 2,
-            slidesToScroll: 1,
-            slidesToShow: 2,
-            dots: true
-          }
+            breakpoint: 1024,
+            settings: {
+                rows: 2,
+                slidesToScroll: 2,
+                slidesToShow: 2,
+                dots: true
+            }
         },
         {
-          breakpoint: 480,
-          settings: {
-            rows: 1,
-            slidesPerRow: 1,
-            slidesToScroll: 1,
-            slidesToShow: 1,
-            dots: true
-          }
+            breakpoint: 768,
+            settings: {
+                rows: 2,
+                slidesToScroll: 1,
+                slidesToShow: 1,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToScroll: 1,
+                slidesToShow: 1,
+                dots: true
+            }
         }
     ]
-    }
+  };
 
-    $(document).ready(function () {
-    $('.slider2').slick(slickoptions);
+  // Initialize Slick slider
+  $('.slider2').slick(slickoptions);
 
-    var slider = $('.slider2');
-    var allSlides = $('.slick-slide > div > .all').clone();
-    var trigger = $('js-filter');
+  // Clone all slides for filtering
+  var allSlides = $('.slick-slide > div > .all').clone();
 
+  // Filtering function
+  var ClassFilter = function(object, item) {
+    this.object = object;
+    this.item = item;
 
-    var ClassFilter = function (object, item) {
-      this.object = object;
-      this.item = item;
-
-      this.filterFunc = function () {
+    this.filterFunc = function() {
         $('.active').removeClass('active');
         $('.js-filter[data-filter="'+this.item+'"]').addClass('active');
         var filterSlides = allSlides.filter(this.item);
-      
-    slider.css({"opacity": "0","left": "50px"});
-    setTimeout(
-    function(){
-      slider
-      .slick('unslick')
-      .empty()
-      .append(filterSlides)
-      .slick(slickoptions)
-      .css({"opacity": "100","left": "0px"})
-    }, 600);	
-      }
-    }
 
-    jQuery('.js-filter').on('click', function (e) {
-    var attr = jQuery(this).attr('data-filter')
+        var slider = $('.slider2');
+        slider.css({"opacity": "0", "left": "50px"});
+        setTimeout(function() {
+            slider
+                .slick('unslick')
+                .empty()
+                .append(filterSlides)
+                .slick(slickoptions)
+                .css({"opacity": "100", "left": "0px"});
+        }, 600);
+    };
+  };
+
+  // Filter click event
+  jQuery('.js-filter').on('click', function(e) {
+    var attr = jQuery(this).attr('data-filter');
     var newFilter = new ClassFilter(this, attr);
-        newFilter.filterFunc();
-    });
+    newFilter.filterFunc();
+  });
 
-    });
-
-   
 
 });
