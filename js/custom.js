@@ -1,17 +1,17 @@
 jQuery( document ).ready(function() {
 
-  //Mobile-menu js
-  function openNav() {
-    jQuery("#mySidenav").css("width", "300px");
-    }
-    function closeNav() {
-        jQuery("#mySidenav").css("width", "0");
-    }
+   //Mobile-menu js
+   function openNav() {
+    $("#mySidenav").css("width", "250px");
+}
+
+function closeNav() {
+    $("#mySidenav").css("width", "0");
+}
+
 
   //gallery section
-  jQuery(document).ready(function ($) {
     const items = $(".animate-swap-tabs__item");
-
     function switchTab(index) {
         let current_Item = $(items[index]).attr("data-item");
         let left_translateY = $(items[index]).attr("data-ly");
@@ -53,23 +53,20 @@ jQuery( document ).ready(function() {
             "translateY(" + right_translateY + ") translateZ(0px)"
         );
     }
-
     items.hover(function () {
         const currentIndex = $(this).index();
         switchTab(currentIndex);
     });
-});
-
 
   //Gallery sticky
-  jQuery('li .gallery__info-box').hover(
-    function() {
-        jQuery('li .gallery__info-box').removeClass('pop');
-        jQuery(this).addClass('pop');
-    },
-    function() {
-    }
-  );
+    jQuery('li .gallery__info-box').hover(
+      function() {
+          jQuery('li .gallery__info-box').removeClass('pop');
+          jQuery(this).addClass('pop');
+      },
+      function() {
+      }
+    );
 
   //Banner slider js
   jQuery('.banner-sliders').slick({
