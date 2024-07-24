@@ -183,6 +183,11 @@ header .header-menu-call .header-contact .search-logo {
     justify-content: center;
     max-width: 24px;
 }
+.contact-button {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+}
 header .header-menu-call .contact-button a {
     background: #7DA265;
     border-radius:70px;
@@ -191,13 +196,15 @@ header .header-menu-call .contact-button a {
     color: #fff;
     font-weight: 500;
     font-size: 20px;
-    line-height: 25.2px;
+    line-height: 25px;
+    width: fit-content;
 }
 header .header-menu-call .contact-button:hover a {
     background: transparent;
     border: 1px solid #7DA265;
+    padding: 15px 32px 20px 32px;
     color:#7DA265;
-    width: fit-content;
+    border-radius:70px;
 }
 @media only screen and (min-width:1200px) and (max-width:1300px){
     header .header-menu-call .header-contact .shop-logo, header .header-menu-call .header-contact .search-logo{
@@ -329,11 +336,10 @@ box-shadow: 0px 4px 20px 0px #00000014;
     margin: 0 auto;
     position: relative;
 }
-section.banner {
-    background: #f29a4114;
+.banner {
     position: relative;
 }
-section.banner::after{
+.banner::after{
     content: "";
     position: absolute;
     background-image: url(../images/seamoss.png);
@@ -343,7 +349,7 @@ section.banner::after{
     top: 100px;
     left: 0;
 }
-section.banner::before{
+.banner::before{
     content: "";
     position: absolute;
     background-image: url(../images/banner-bottom-image.png);
@@ -398,11 +404,19 @@ h2.banner_heading-sub {
 }
 .banner-social-left {
     position: relative;
+    background-color: #f29a4114;
 }
 .banner__shop-btn {
     display: flex;
     flex-flow: row;
     justify-content: center;
+}
+a.banner-shop:hover {
+    background: transparent;
+    border: 1px solid #7DA265;
+    padding: 15px 32px 20px 32px;
+    color:#7DA265;
+    border-radius:70px;
 }
 .banner__secial-media {
     display: flex;
@@ -432,8 +446,8 @@ a.banner-email:before{
     background-repeat: no-repeat;
     width: 2px;
     height: 296px;
-    bottom: 30px;
-    left: 7px;
+    bottom: 35px;
+    left: 20px;
 }
 a.banner-twitter {
     position: relative;
@@ -446,7 +460,7 @@ a.banner-twitter:before{
     width: 2px;
     height: 296px;
     top: 30px;
-    left: 7px;
+    left: 20px;
 }
 .banner-sliders .slick-dots {
     position: absolute;
@@ -455,7 +469,7 @@ a.banner-twitter:before{
     margin: 0;
     list-style: none;
     text-align: center;
-    top: 285px;
+    top: 390px;
     left: 100px;
     display: flex !important;
     flex-flow: column !important;
@@ -465,30 +479,47 @@ a.banner-twitter:before{
     margin-left: -2px !important;
     background-image: url(../images/banner-dots-line.png);
     background-repeat: no-repeat;
+    height: 22px;
+    width: 22px;
 }
+
 .banner-sliders .slick-dots li.slick-active button:after {
     content: "";
     position: absolute;
     width: 357px;
-    bottom: -10px;
-    left: -2px;
+    bottom: -13px;
+    left: 0px;
     border: 4px solid #7DA265;
     border-radius: 30px;
 }
 .banner-sliders .slick-list{
     overflow: visible;
 }
+.banner-sliders .slick-dots li{
+    margin: -25px 5px !important;
+}
+.banner-sliders .slick-dots li button:before{
+    background-color: #7DA265;
+    height: 16px;
+    width: 16px;
+    border-radius: 30px;
+    content: "";
+    margin-top: 20px;
+}
 @media (max-width:1440px){
-    section.banner::after{
+    .banner::after{
         height: 200px;
         width: 1235px;
     }
     .banner__secial-media{
         bottom: 350px;
     }
+    .banner::before{
+        display: none;
+    }
 }
 @media (max-width:1200px){
-    .banner__secial-media{
+    .banner__secial-media, .banner::after{
         display: none;
     }
 }
@@ -511,7 +542,7 @@ a.banner-twitter:before{
     .banner_images img{
         width: 500px;
     }
-    section.banner::before{
+    .banner::before{
         display: none;
     }
     .banner__shop-btn{
@@ -531,6 +562,8 @@ a.banner-twitter:before{
     .banner-sliders ul.slick-dots {
         position: absolute;
         top: 100%;
+        left: 0;
+        right: 0;
     }
 }
 /* Deal section css */
@@ -578,6 +611,11 @@ a.banner-twitter:before{
     line-height: 22.68px;
     color: #fff;
 }
+.green a.deal-card__button:hover {
+    color: #7DA265;
+    border: 1px solid #7DA265;
+    background:transparent;
+}
 .blue a.deal-card__button{
     background: #446FB6;
     padding: 4px 10px 6px 10px;
@@ -586,6 +624,11 @@ a.banner-twitter:before{
     font-weight: 600;
     line-height: 22.68px;
     color: #fff;
+}
+.blue a.deal-card__button:hover{
+    color: #446FB6;
+    border: 1px solid #446FB6;
+    background:transparent;
 }
 .deal-section {
     text-align: center;
@@ -711,7 +754,7 @@ a.banner-twitter:before{
 @media (max-width:1200px){
     .deal-card{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 20px 25px 22px 20px;;
     }
     .deal-card__countdown-item{
@@ -843,6 +886,9 @@ p.about__full-content {
     width: 606px;
     margin-bottom: 60px;
 }
+.about__button {
+    width: fit-content;
+}
 a.about_more-btn {
     background: #7DA265;
     border-radius: 70px;
@@ -893,6 +939,16 @@ a.about_more-btn {
     }
     p.about__full-content{
         margin-bottom: 30px;
+    }
+    .about__image, .about__content{
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    h2.about__heading-title:before{
+        top: -30;
+        right: 0;
     }
 }
 
@@ -968,7 +1024,7 @@ a.product-shop {
     margin-top: 20px;
 }
 .slick-dots li.slick-active button:before {
-    opacity: .75;
+    opacity: 1;
     color: #7DA265;
     height: 16px;
     width: 16px;
@@ -1199,6 +1255,14 @@ section.gallery-section::before {
     .animate-swap-tabs__container{
         padding: 100px 20px 100px 20px !important;
         width: 100%;
+    }
+}
+@media (max-width:767px){
+    .animate-swap-tabs__column.animate-swap-tabs__column--content{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media only screen and (max-width: 575.98px){
@@ -1606,6 +1670,12 @@ h2.testimonial-section__title::before {
     .testimonial__data .slick-next-review, .testimonial__data .slick-prev-review{
         display: none !important;
     }
+    .testimonial__client-review{
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
 }
 @media (max-width:425px){
     .testimonial__container{
@@ -1764,7 +1834,18 @@ label.term {
         padding: 25px;
     }
     .newsletter-section__subtitle{
-        line-height: 42px;
+        line-height: 32px;
+    }
+    h2.newsletter-section__title{
+        margin-bottom: 0px;
+    }
+    .newsletter__heading{
+        width: 100%;
+        text-align: center;
+    }
+    h2.newsletter-section__title::before{
+        left: 0;
+        right: 0;
     }
 }
 @media (max-width:425px){
@@ -1897,6 +1978,8 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
     .footer__logo-main, .footer__quick-links, .footer__infomation{
         max-width: 100%;
         flex: 1 1 100%;
+        text-align: center;
+        align-items: center;
     }
     .footer__quick-links {
         padding-left: 0px;
@@ -1909,10 +1992,11 @@ p.footer__infomation-menu-location, p.footer__infomation-menu-date, p.footer__in
         max-width: 100%;
     }
     .footer__quick-links-title, .footer__infomation-title{
-        margin-bottom: 21px;
+        margin-bottom: 15px;
     }
     ul.footer__infomation-menu{
         gap: 12px;
+        align-items: center;
     }
     .footer__row {
         padding-bottom: 30px;
