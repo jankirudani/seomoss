@@ -81,19 +81,20 @@ jQuery( document ).ready(function() {
     dots: true, 
     arrows: true,
     infinite: true,
-    autoplay: false,
-    autoplaySpeed: 5000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
     slidesToShow: 1,
     prevArrow: '<button type="button" class="slick-prev-review"></button>',
     nextArrow: '<button type="button" class="slick-next-review"></button>'
   });
+
   
 
   //dealday slider js
   function initializeSlider() {
-    if (jQuery(window).width() <= 1024) {
-      if (!jQuery('.dealday__cards').hasClass('slick-initialized')) {
+    if(jQuery(window).width() <= 1024) {
+      if(!jQuery('.dealday__cards').hasClass('slick-initialized')) {
         jQuery('.dealday__cards').slick({
           dots: true,
           arrows: false,
@@ -103,10 +104,26 @@ jQuery( document ).ready(function() {
           slidesToScroll: 1,
           responsive: [
             {
-              breakpoint: 767,
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
               settings: {
                 slidesToShow: 1,
-                dots: true
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
               }
             }
           ]
