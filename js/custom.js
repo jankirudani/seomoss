@@ -1,12 +1,7 @@
 jQuery( document ).ready(function() {
 
   //Mobile-menu js
-  function openNav() {
-    $("#mySidenav").css("width", "250px");
-  }
-  function closeNav() {
-    $("#mySidenav").css("width", "0");
-  }
+
 
 
   // Gallery section

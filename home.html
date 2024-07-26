@@ -58,7 +58,7 @@
         <!-- Header mobile menu section -->
         <div id="mySidenav" class="sidenav">
             <div class="header-logo">
-                <a href="/home"><img src="./images/header_logo.png"></a>
+                <a href="/home"><img src="./images/footer-logo.png"></a>
             </div>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./images/close-icon.svg"/></a>
             <a href="#" class="active">Home</a>
@@ -905,5 +905,18 @@
         <script src="./js/jquery.min.js"></script>
         <script src="./js/slick.js"></script>
         <script src="./js/custom.js"></script>
+        <script type="text/javascript">
+            function openNav() {
+                $("#mySidenav").css("width", "300px");
+            }
+    
+            function closeNav() {
+                $("#mySidenav").css("width", "0");
+            }
+    
+            jQuery(document).ready(function(){
+                // Any other jQuery related code can go here
+            });
+        </script>
     </body>
 </html>
